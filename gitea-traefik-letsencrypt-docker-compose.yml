@@ -87,7 +87,7 @@ services:
       # Assign the Gitea router to a named Traefik service
       - "traefik.tcp.routers.gitea-ssh.service=gitea-ssh"
       # Use the 'Gitea' (custom) entry point
-      - "traefik.tcp.routers.gitea-ssh.entrypoints=gitea-ssh"
+      - "traefik.tcp.routers.gitea-ssh.entrypoints=ssh"
       # Define the internal container port for routing to the Gitea service
       - "traefik.tcp.services.gitea-ssh.loadbalancer.server.port=22"
       # Specify which Docker network Traefik should use for routing
